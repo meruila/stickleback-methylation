@@ -13,6 +13,7 @@ then
   exit $FORCE_EXIT
 fi
 
+# checking -d/--dir and -r/--reads options
 while [ "$1" != "" ]; do
   case $1 in
     -d | --dir )
@@ -30,11 +31,13 @@ while [ "$1" != "" ]; do
   shift
 done
 
+# if reads is in current directory, change READS string to PWD + READS
 if [[ -f "${PWD}${READS}" ]]
 then
     READS=${PWD}${READS}
 fi
 
+# directory where to download the SRA files
 mkdir -p $DIR
 cd $DIR
 
