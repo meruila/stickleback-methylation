@@ -51,3 +51,5 @@ then
 else
     echo "Reads file should end with .txt"
 fi
+
+# ./01-get_sra.sh --reads reads.txt --dir ../reads
