@@ -45,6 +45,7 @@ if [[ "${READS: -4}" == ".txt" ]]
 then
     cat $READS | while read r
     do
+        echo "Downloading: ${r}"
         wget ${r}
     done
 else
