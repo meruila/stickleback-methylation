@@ -37,13 +37,13 @@ then
     READS=${PWD}${READS}
 fi
 
-# directory where to download the SRA files
+# directory where to put the downloaded SRA files
 mkdir -p $DIR
 cd $DIR
 
 if [[ "${READS: -4}" == ".txt" ]]
 then
-    cat $READS | while read r
+    for r in $(cat $READS)
     do
         echo "Downloading: ${r}"
         wget ${r}
