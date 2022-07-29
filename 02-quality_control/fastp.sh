@@ -8,12 +8,13 @@ ARGUMENTS=2
 FORCE_EXIT=65
 # Location of Fastp tool
 FASTP_LOCATION="/home/tofumeow/Software/"
-EXT=".fastq"
-R1_ID="_1"
-R2_ID="_2"
-OUTPUT_EXT=".cleaned"
+# Uncomment if running separately
+# EXT=".fastq"
+# R1_ID="_1"
+# R2_ID="_2"
+# OUTPUT_EXT=".cleaned"
 
-if [ $# -ne "$ARGUMENTS" ]
+if [ $# -lt "$ARGUMENTS" ]
 then
   echo "Looking for one argument: -r/--rloc"
   exit $FORCE_EXIT
@@ -24,7 +25,7 @@ fi
 #       1. -e/--ext: for changing extension
 #       2. --r1: for changing identifier for read 1
 #       3. --r2: for changing identifier for read 2
-#       3. --oext: for changing filename extension of output binary files
+#       4. --oext: for changing filename extension of output binary files
 while [ "$1" != "" ]; do
   case $1 in
     -r | --rloc )
