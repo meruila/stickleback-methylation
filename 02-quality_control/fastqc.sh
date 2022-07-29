@@ -59,3 +59,5 @@ for out in ./fastqc_outputs/*.zip
 do
     unzip $out -d fastqc_outputs/ # unzip and direct the output to the fastqc directory
 done
+
+# Command used: ./fastqc.sh --rloc ../01-get_reads/fastq_reads/
