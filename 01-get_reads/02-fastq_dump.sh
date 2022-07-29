@@ -13,5 +13,5 @@ mkdir fastq_reads
 for r in $(cat $SRA_READS)
 do
     SRA_ID=${r##*/}
-    $TOOLKIT/fasterq-dump.3.0.0 --outdir fastq_reads --skip-technical  --readids --read-filter pass ~/ncbi/public/sra/$SRA_ID
+    $TOOLKIT/fasterq-dump.3.0.0 --outdir fastq_reads --skip-technical  --readids --read-filter pass ../reads/$SRA_ID
 done
