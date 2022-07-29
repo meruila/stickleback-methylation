@@ -6,7 +6,7 @@
 ARGUMENTS=4
 FORCE_EXIT=65
 PWD=$(pwd)/
-echo $PWD
+
 if [ $# -ne "$ARGUMENTS" ]
 then
   echo "Looking for two arguments: -d and -r"
@@ -52,4 +52,4 @@ else
     echo "Reads file should end with .txt"
 fi
 
-# ./01-get_sra.sh --reads reads.txt --dir ../reads
+# Command used: ./01-get_sra.sh --reads reads.txt --dir ../reads
