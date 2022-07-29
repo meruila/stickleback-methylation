@@ -10,6 +10,7 @@ FORCE_EXIT=65
 EXT=".fastq"
 R1_ID="_1"
 R2_ID="_2"
+OUTPUT_EXT=".cleaned"
 IS_FASTQC=1
 
 if (($# < "$ARGUMENTS"))
