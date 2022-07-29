@@ -4,7 +4,6 @@
 # Quality control using FastQC #
 ################################
 
-
 ARGUMENTS=2
 FORCE_EXIT=65
 EXT=".fastq"
@@ -51,18 +50,12 @@ mkdir -p fastqc_outputs
 
 for r in $(ls $READS_LOCATION*$R1_ID$EXT)
 do
-    # echo $r
     FILE_W_EXT=${r#$READS_LOCATION/}
     FILENAME=${FILE_W_EXT%$R1_ID$EXT}
-    # echo $FILE_W_EXT
-    # echo $FILENAME
     fastqc $FILENAME*$EXT -o fastqc_outputs 
 done
 
-if [ $(ls -A ./fastqc_outputs) ]
-then
-    for out in fastqc_outputs/*.zip 
-    do
-        unzip $filename -d fastqc_outputs/ # unzip and direct the output to the fastqc directory
-    done
-fi
+for out in ./fastqc_outputs/*.zip 
+do
+    unzip $out -d fastqc_outputs/ # unzip and direct the output to the fastqc directory
+done
