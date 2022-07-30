@@ -19,7 +19,7 @@ while [ "$1" != "" ]; do
   case $1 in
     -g | --genome )
       shift
-      GENOME="$1"
+      GENOME_DIRECTORY="$1"
       ;;
     * )
       echo "Unknown argument: $1"
@@ -28,6 +28,6 @@ while [ "$1" != "" ]; do
   shift
 done
 
-${BISMARK_LOCATION}bismark_genome_preparation --path_to_aligner $BOWTIE_LOCATION --verbose $GENOME
+${BISMARK_LOCATION}bismark_genome_preparation --path_to_aligner $BOWTIE_LOCATION --verbose $GENOME_DIRECTORY
 
 # Command used: ./bismark-01-genome_prep.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus
