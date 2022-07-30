@@ -6,8 +6,8 @@
 
 ARGUMENTS=2
 FORCE_EXIT=65
-BISMARK_LOCATION="../../Tools/Bismark-0.22.3/"
-BOWTIE_LOCATION="../../Tools/bowtie2-2.4.4-linux-x86_64/"
+BISMARK_LOCATION="/home/tofumeow/Documents/UPLB/Y3SM/Tools/Bismark-0.22.3/"
+BOWTIE_LOCATION="/home/tofumeow/Documents/UPLB/Y3SM/Tools/bowtie2-2.4.4-linux-x86_64/"
 
 if [ $# -ne "$ARGUMENTS" ]
 then
