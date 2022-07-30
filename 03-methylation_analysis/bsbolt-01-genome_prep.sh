@@ -32,4 +32,4 @@ done
 
 python3 -m bsbolt Index -G $GENOME -DB $OUTPUT_DIRECTORY
 
-# Command used: 
+# Command used: ./bsbolt-01-genome_prep.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus/G_Aculeatus-genome.fa --output outputs
