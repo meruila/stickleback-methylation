@@ -1,0 +1,37 @@
+Generating WGBS Database at outputs
+[bwa_index] Pack FASTA... 5.26 sec
+[bwa_index] Construct BWT for the packed sequence...
+[BWTIncCreate] textLength=1887577444, availableWord=144816560
+[BWTIncConstructFromPacked] 10 iterations done. 99999988 characters processed.
+[BWTIncConstructFromPacked] 20 iterations done. 199999988 characters processed.
+[BWTIncConstructFromPacked] 30 iterations done. 299999988 characters processed.
+[BWTIncConstructFromPacked] 40 iterations done. 399999988 characters processed.
+[BWTIncConstructFromPacked] 50 iterations done. 499999988 characters processed.
+[BWTIncConstructFromPacked] 60 iterations done. 599999988 characters processed.
+[BWTIncConstructFromPacked] 70 iterations done. 699999988 characters processed.
+[BWTIncConstructFromPacked] 80 iterations done. 799999988 characters processed.
+[BWTIncConstructFromPacked] 90 iterations done. 899999988 characters processed.
+[BWTIncConstructFromPacked] 100 iterations done. 999999988 characters processed.
+[BWTIncConstructFromPacked] 110 iterations done. 1099999988 characters processed.
+[BWTIncConstructFromPacked] 120 iterations done. 1199999988 characters processed.
+[BWTIncConstructFromPacked] 130 iterations done. 1295474580 characters processed.
+[BWTIncConstructFromPacked] 140 iterations done. 1380390260 characters processed.
+[BWTIncConstructFromPacked] 150 iterations done. 1455859508 characters processed.
+[BWTIncConstructFromPacked] 160 iterations done. 1522932756 characters processed.
+[BWTIncConstructFromPacked] 170 iterations done. 1582543636 characters processed.
+[BWTIncConstructFromPacked] 180 iterations done. 1635521924 characters processed.
+[BWTIncConstructFromPacked] 190 iterations done. 1682605140 characters processed.
+[BWTIncConstructFromPacked] 200 iterations done. 1724448788 characters processed.
+[BWTIncConstructFromPacked] 210 iterations done. 1761635508 characters processed.
+[BWTIncConstructFromPacked] 220 iterations done. 1794683156 characters processed.
+[BWTIncConstructFromPacked] 230 iterations done. 1824051924 characters processed.
+[BWTIncConstructFromPacked] 240 iterations done. 1850150948 characters processed.
+[BWTIncConstructFromPacked] 250 iterations done. 1873343796 characters processed.
+[bwt_gen] Finished constructing BWT in 257 iterations.
+[bwa_index] 440.91 seconds elapse.
+[bwa_index] Update BWT... 2.98 sec
+[bwa_index] Pack forward-only FASTA... 5.79 sec
+[bwa_index] Construct SA from BWT and Occ... 223.39 sec
+[main] Version: BSB-1.2.1-BWA-fork-0.7.17
+[main] CMD: /home/tofumeow/.local/lib/python3.8/site-packages/bsbolt/External/BWA/bwa index -a bwtsw -b 10000000 outputs/BSB_ref.fa
+[main] Real time: 680.139 sec; CPU: 678.337 sec
