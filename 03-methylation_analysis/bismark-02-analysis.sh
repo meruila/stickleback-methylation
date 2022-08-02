@@ -63,7 +63,7 @@ for r in $(ls $READS_LOCATION*$R1_ID$EXT)
     # the study uses a reduced representation library
     # $BISMARK_LOCATION/deduplicate_bismark --bam $1
     BAM=${FILENAME}_bismark_bt2.bam
-    $BISMARK_LOCATION/bismark_methylation_extractor $GENOME_DIRECTORY $BAM --path_to_bowtie2 $BOWTIE_LOCATION --samtools_path $SAMTOOLS_LOCATION
+    $BISMARK_LOCATION/bismark_methylation_extractor $GENOME_DIRECTORY $BAM --samtools_path $SAMTOOLS_LOCATION --bedGraph
 done
 
 $BISMARK_LOCATION/bismark2report
