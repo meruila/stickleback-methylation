@@ -1,0 +1,6 @@
+Gasterosteus_aculeatus
+
+Parameters used to extract methylation information:
+Bismark Extractor Version: v0.22.3
+Output specified: strand-specific (default)
+
