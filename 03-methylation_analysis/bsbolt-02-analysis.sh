@@ -47,7 +47,7 @@ while [ "$1" != "" ]; do
   shift
 done
 
-mkdir -p bsbolt_outputs
+mkdir -p {bsbolt_bam,bsbolt_mcalls}
 
 for r in $(ls $READS_LOCATION*$R1_ID$EXT)
   do
@@ -56,11 +56,8 @@ for r in $(ls $READS_LOCATION*$R1_ID$EXT)
     read1=$r
     read2=$READS_LOCATION$FILENAME$R2_ID$EXT
     # analysis using paired-end reads from stickleback
-    python3 -m bsbolt Align -DB $GENOME_DIRECTORY -F1 $read1 -F2 $read2 -O ./bsbolt_outputs/$SRA_ID
-
-    
+    python3 -m bsbolt Align -DB $GENOME_DIRECTORY -F1 $read1 -F2 $read2 -O ./bsbolt_bam/$FILENAME
+    python3 -m bsbolt CallMethylation -I ./bsbolt_bam/$FILENAME.bam -O ./bsbolt_mcalls/ -DB $GENOME_DIRECTORY -t 2 -verbose > methylation_stats$FILENAME.txt
 done
 
-# Alternate command used: ./bsbolt-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/03-methylation_analysis/genome_prep_outputs -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/ -e .fastq --r1 _1 --r2 _2
-
-# python3 -m bsbolt CallMethylation -I ../outputs/BSB_pe_test.sorted.bam -O ../outputs -DB ../converted -t 2 -verbose > methylation_stats.txt
+# Command used: ./bsbolt-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/03-methylation_analysis/genome_prep_outputs -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/ -e .fastq --r1 _1 --r2 _2
