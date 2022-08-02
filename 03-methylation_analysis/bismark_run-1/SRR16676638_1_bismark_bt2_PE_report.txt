@@ -1,0 +1,42 @@
+Bismark report for: /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/SRR16676638_1.fastq and /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/SRR16676638_2.fastq (version: v0.22.3)
+Bismark was run with Bowtie 2 against the bisulfite genome of /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus/ with the specified options: -q --score-min L,0,-0.2 --ignore-quals --no-mixed --no-discordant --dovetail --maxins 500
+Option '--directional' specified (default mode): alignments to complementary strands (CTOT, CTOB) were ignored (i.e. not performed)
+
+Final Alignment report
+======================
+Sequence pairs analysed in total:	10262893
+Number of paired-end alignments with a unique best hit:	2506317
+Mapping efficiency:	24.4% 
+Sequence pairs with no alignments under any condition:	6369008
+Sequence pairs did not map uniquely:	1387568
+Sequence pairs which were discarded because genomic sequence could not be extracted:	6
+
+Number of sequence pairs with unique best (first) alignment came from the bowtie output:
+CT/GA/CT:	1249098	((converted) top strand)
+GA/CT/CT:	0	(complementary to (converted) top strand)
+GA/CT/GA:	0	(complementary to (converted) bottom strand)
+CT/GA/GA:	1257213	((converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	115071350
+
+Total methylated C's in CpG context:	18980516
+Total methylated C's in CHG context:	25157262
+Total methylated C's in CHH context:	70424376
+Total methylated C's in Unknown context:	62548
+
+Total unmethylated C's in CpG context:	147189
+Total unmethylated C's in CHG context:	68567
+Total unmethylated C's in CHH context:	293440
+Total unmethylated C's in Unknown context:	11099
+
+C methylated in CpG context:	99.2%
+C methylated in CHG context:	99.7%
+C methylated in CHH context:	99.6%
+C methylated in unknown context (CN or CHN):	84.9%
+
+
+Bismark completed in 0d 0h 39m 19s

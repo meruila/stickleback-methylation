@@ -1,0 +1,42 @@
+Bismark report for: /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/SRR16676625_1.fastq and /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/SRR16676625_2.fastq (version: v0.22.3)
+Bismark was run with Bowtie 2 against the bisulfite genome of /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus/ with the specified options: -q --score-min L,0,-0.2 --ignore-quals --no-mixed --no-discordant --dovetail --maxins 500
+Option '--directional' specified (default mode): alignments to complementary strands (CTOT, CTOB) were ignored (i.e. not performed)
+
+Final Alignment report
+======================
+Sequence pairs analysed in total:	13359490
+Number of paired-end alignments with a unique best hit:	3885989
+Mapping efficiency:	29.1% 
+Sequence pairs with no alignments under any condition:	7534826
+Sequence pairs did not map uniquely:	1938675
+Sequence pairs which were discarded because genomic sequence could not be extracted:	7
+
+Number of sequence pairs with unique best (first) alignment came from the bowtie output:
+CT/GA/CT:	1934512	((converted) top strand)
+GA/CT/CT:	0	(complementary to (converted) top strand)
+GA/CT/GA:	0	(complementary to (converted) bottom strand)
+CT/GA/GA:	1951470	((converted) bottom strand)
+
+Number of alignments to (merely theoretical) complementary strands being rejected in total:	0
+
+Final Cytosine Methylation Report
+=================================
+Total number of C's analysed:	183369986
+
+Total methylated C's in CpG context:	31275170
+Total methylated C's in CHG context:	40561150
+Total methylated C's in CHH context:	110819989
+Total methylated C's in Unknown context:	102216
+
+Total unmethylated C's in CpG context:	212288
+Total unmethylated C's in CHG context:	105272
+Total unmethylated C's in CHH context:	396117
+Total unmethylated C's in Unknown context:	17206
+
+C methylated in CpG context:	99.3%
+C methylated in CHG context:	99.7%
+C methylated in CHH context:	99.6%
+C methylated in unknown context (CN or CHN):	85.6%
+
+
+Bismark completed in 0d 0h 46m 29s
