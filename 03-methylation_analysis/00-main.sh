@@ -107,7 +107,7 @@ then
   echo "Enter read2 identifier (e.g. _2): "
   read R2_ID
 
-  ./bsbolt-01-genome_prep.sh -g $GENOME
+  ./bsbolt-01-genome_prep.sh -g $GENOME -o $OUTPUT_DIRECTORY
   ./bsbolt-02-analysis.sh -g $OUTPUT_DIRECTORY -r $READS_LOCATION -e $EXT --r1 $R1_ID --r2 $R2_ID
 else
   echo "Choose only one tool: --bismark_interface or --bsbolt_interface."
@@ -119,6 +119,6 @@ then
   ./bismark-02-analysis.sh -g $GENOME -r $READS_LOCATION -e $EXT --r1 $R1_ID --r2 $R2_ID
 elif [[ $IS_BSBOLT == 1 ]]
 then
-  ./bsbolt-01-genome_prep.sh -g $GENOME
+  ./bsbolt-01-genome_prep.sh -g $GENOME -o $OUTPUT_DIRECTORY
   ./bsbolt-02-analysis.sh -g $OUTPUT_DIRECTORY -r $READS_LOCATION -e $EXT --r1 $R1_ID --r2 $R2_ID
 fi
