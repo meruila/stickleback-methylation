@@ -11,9 +11,11 @@ BOWTIE_LOCATION="/home/tofumeow/Documents/UPLB/Y3SM/Tools/bowtie2-2.4.4-linux-x8
 SAMTOOLS_LOCATION="/home/tofumeow/Documents/UPLB/Y3SM/Tools/samtools-1.12/"
 
 # Uncomment if running this code separately
-# R1_ID="_1"
-# R2_ID="_2"
-# EXT=".fastq"
+R1_ID="_1"
+R2_ID="_2"
+EXT=".cleaned.fastq"
+
+start=`date +%s`
 
 if [ $# -lt "$ARGUMENTS" ]
 then
@@ -69,5 +71,10 @@ done
 $BISMARK_LOCATION/bismark2report
 $BISMARK_LOCATION/bismark2summary
 
+end=`date +%s`
+
+runtime=$((end-start))
+echo $runtime >> run_bismark.txt
+
 # Command used: ./bismark-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/
-# Alternate command used: ./bismark-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/ -e .fastq --r1 _1 --r2 _2
+# Alternate command used: ./bismark-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/02-quality_control/fastp_bin/ -e .cleaned.fastq --r1 _1 --r2 _2
