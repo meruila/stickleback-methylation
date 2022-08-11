@@ -9,10 +9,10 @@ FORCE_EXIT=65
 # Location of Fastp tool
 FASTP_LOCATION="/home/tofumeow/Software/"
 # Uncomment if running separately
-# EXT=".fastq"
-# R1_ID="_1"
-# R2_ID="_2"
-# OUTPUT_EXT=".cleaned"
+EXT=".fastq"
+R1_ID="_1"
+R2_ID="_2"
+OUTPUT_EXT=".cleaned.fastq"
 
 if [ $# -lt "$ARGUMENTS" ]
 then
@@ -67,7 +67,7 @@ do
     out2=./fastp_bin/$FILENAME$R2_ID$OUTPUT_EXT
     result=./fastp_html/$FILENAME.html
     result_json=./fastp_json/$FILENAME.json
-    $FASTP_LOCATION/fastp --qualified_quality_phred 30 --length_required 75 --in1 $in1 --in2 $in2 --out1 $out1 --out2 $out2 --html $result --json $result_json
+    $FASTP_LOCATION/fastp --qualified_quality_phred 30 --length_required 75 --trim_front1 15 --in1 $in1 --in2 $in2 --out1 $out1 --out2 $out2 --html $result --json $result_json
 done
 
 # Command used: ./fastp.sh -r ../01-get_reads/fastq_reads/
