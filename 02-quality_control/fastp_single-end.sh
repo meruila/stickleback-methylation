@@ -55,7 +55,7 @@ do
     out1=./fastp_bin_single/$FILENAME$R1_ID$OUTPUT_EXT
     result=./fastp_html_single/$FILENAME.html
     result_json=./fastp_json_single/$FILENAME.json
-    $FASTP_LOCATION/fastp --qualified_quality_phred 30 --length_required 75 --trim_front1 15 --in1 $in1 --out1 $out1 --html $result --json $result_json
+    $FASTP_LOCATION/fastp --qualified_quality_phred 30 --length_required 75 --trim_front1=15 --trim_tail1=3 --in1 $in1 --out1 $out1 --html $result --json $result_json
 done
 
 # COmmand used: ./fastp_single-end.sh -r ../01-get_reads/fastq_reads_single/
