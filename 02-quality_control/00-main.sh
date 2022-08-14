@@ -67,3 +67,5 @@ then
 else
     ./fastp.sh -r $READS_LOCATION -e $EXT --r1 $R1_ID --r2 $R2_ID --oext $OUTPUT_EXT
 fi
+
+# Command used: ./00-main.sh -r /media/tofumeow/Potato/Bioinformatics/artemov_reads/fastq_reads_paired/ -e .fastq --r1 _1 --r2 _2 --oext .cleaned.fastq --fastqc
