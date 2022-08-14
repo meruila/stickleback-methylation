@@ -109,8 +109,6 @@ then
 
   ./bsbolt-01-genome_prep.sh -g $GENOME -o $OUTPUT_DIRECTORY
   ./bsbolt-02-analysis.sh -g $OUTPUT_DIRECTORY -r $READS_LOCATION -e $EXT --r1 $R1_ID --r2 $R2_ID
-else
-  echo "Choose only one tool: --bismark_interface or --bsbolt_interface."
 fi
 
 if [[ $IS_BISMARK == 1 ]]
@@ -122,3 +120,6 @@ then
   ./bsbolt-01-genome_prep.sh -g $GENOME -o $OUTPUT_DIRECTORY
   ./bsbolt-02-analysis.sh -g $OUTPUT_DIRECTORY -r $READS_LOCATION -e $EXT --r1 $R1_ID --r2 $R2_ID
 fi
+
+# Command used: ./00-main.sh --bismark_interface
+# Alternate command used: ./00-main.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus -r /media/tofumeow/Potato/Bioinformatics/stickleback_runs/fastp_paired_end/fastp_bin -e .cleaned.fastq --r1 _1 --r2 _2 --bismark
