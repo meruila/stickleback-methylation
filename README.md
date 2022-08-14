@@ -6,13 +6,13 @@ Run the `00-main.sh` scripts in `01-get_reads`, `02-quality_control`, or `03-met
 1. For `01-get_reads`, provide `-d`/`--dir` and `-r`/`--reads`.  
 2. For `02-quality_control`, provide `-r`/`--reads` and `--fastp`/`--fastqc`. For Fastp, it is optional to provide the other parameters such as the file extensions and read identifiers.  
 3. For `03-methylation_analysis`, provide `-d`/`--dir`, `-r`/`--reads`, and `--bis`/`--bsb`.
+### Alternative Method
+The scripts under each of the directories can also be run (prefixed with `01-`, `02-`, ...) if need to be tested individually.
 ## Dependencies
 ### SRA Toolkit
-This is used to process data from SRA. Under these tools, the `fasterq-dump` module is used to extract FASTQ data from SRA.  
-To download the SRA Toolkit, visit its [wiki](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit). This [video](https://www.youtube.com/watch?v=FjYO6Ys5cpc) may also help in using the toolkit.
+This is used to process data from SRA. Under these tools, the `fasterq-dump` module is used to extract FASTQ data from SRA. To download the SRA Toolkit, visit its [wiki](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit). This [video](https://www.youtube.com/watch?v=FjYO6Ys5cpc) may also help in using the toolkit.
 ### Quality Control Tools
 ### *FastQC*
-This is used to 
 ### *Fastp*
 ### Methylation Analysis Tools
 ### *Bismark*
