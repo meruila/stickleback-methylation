@@ -40,3 +40,5 @@ fi
 
 ./01-get_sra.sh --reads reads.txt --dir ../reads
 ./02-fasterq_dump.sh -r reads.txt -d ../reads
+
+# Command used: ./00-main.sh -d dl_reads -r reads.txt
