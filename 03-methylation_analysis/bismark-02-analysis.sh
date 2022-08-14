@@ -77,4 +77,4 @@ runtime=$((end-start))
 echo $runtime >> run_bismark.txt
 
 # Command used: ./bismark-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/01-get_reads/fastq_reads/
-# Alternate command used: ./bismark-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/02-quality_control/fastp_bin/ -e .cleaned.fastq --r1 _1 --r2 _2
+# Alternate command used: ./bismark-02-analysis.sh -g /home/tofumeow/Documents/UPLB/Y3SM/reference-genome/Gasterosteus_aculeatus -r /home/tofumeow/Documents/UPLB/Y3SM/stickleback-methylation/02-quality_control/fastp_bin2/ -e .cleaned.fastq --r1 _1 --r2 _2
