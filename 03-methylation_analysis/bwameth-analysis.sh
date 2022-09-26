@@ -1,8 +1,8 @@
 #! /bin/bash
 
-####################################################
-# Alignment and methylation analysis using BWAMeth #
-####################################################
+#####################################################################
+# Alignment and methylation analysis using BWAMeth and MethylDackel #
+#####################################################################
 
 R1_ID="_1"
 R2_ID="_2"
@@ -20,8 +20,8 @@ for r in $(ls $READS_LOCATION*$R1_ID$EXT)
     read1=$r
     read2=$READS_LOCATION$FILENAME$R2_ID$EXT
     # analysis using paired-end reads from stickleback
-    bwameth.py --reference /home/tofumeow/Documents/UPLB/PGC-Agriculture/Y3SM-Stickleback/reference-genome/Gasterosteus_aculeatus/G_Aculeatus-genome.fa $read1 $read2
-
+    bwameth.py --reference /home/tofumeow/Documents/UPLB/PGC-Agriculture/Y3SM-Stickleback/reference-genome/Gasterosteus_aculeatus/G_Aculeatus-genome.fa $read1 $read2 | samtools view -b - > $FILENAME.bam
+    MethylDackel extract /home/tofumeow/Documents/UPLB/PGC-Agriculture/Y3SM-Stickleback/reference-genome/Gasterosteus_aculeatus/G_Aculeatus-genome.fa $FILENAME.bam
 done
 
 end=`date +%s`
